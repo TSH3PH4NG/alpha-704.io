@@ -1,0 +1,140 @@
+@keyframes gradient {
+    20% {
+        background-position: 0% 50%;
+    }
+    30% {
+        background-position: 10% 50%;
+    }
+    100% {
+        background-position: 0% 20%;
+    }
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}
+
+div.demo {
+  width: 250px;
+  height: 350px;
+  box-shadow: 16px 14px 20px #0000008c;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.demo::before{
+  content: "";
+  /* override the gradient here */
+  background-image: conic-gradient(
+     cyan 20deg,
+    cyan 90deg
+  );
+  width: 90%;
+  height: 150%;
+  position: absolute;
+  animation: rotate 2s linear infinite;
+}
+div.demo::after{
+  content: "";
+  width: 241px;
+  height: 341px;
+  background: black;
+  position: absolute;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: cyan;
+  font-size: larger;
+  letter-spacing: 5px;
+ 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+	background: linear-gradient(-45deg, #ff00fc,#ff00e8 , #00d7eb, #00b8ff, hsl(303.1,100%,50%),#f500ff);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 110vh;
+	
+}
+
+.intro {
+  color: #ff0000;
+  position: relative;bottom:20rem;
+ 
+}
+
+.link1 {
+  margin: 7px;
+  color: black;
+ outline: none;
+ background-color: cyan;
+  border: none;
+  border-radius: 0px;
+  font-size: 12px;
+  padding: 15px 40px ;
+  position: relative;bottom:17rem;
+}
+
+.link2 {
+  margin: 7px;
+  color: black;
+ outline: none;
+ background-color: cyan;
+  border: none;
+  border-radius: 0px;
+  font-size: 12px;
+  padding: 15px 26px;
+  position: relative;bottom:16rem;
+
+}
+.link3 {
+  margin: 7px;
+  color: black;
+ outline: none;
+ background-color: cyan;
+  border: none;
+  border-radius: 0px;
+  font-size: 12px;
+  padding: 15px 27px;
+  position: relative;bottom:15rem;
+
+}
+
+.link1:hover {
+  opacity: .7;
+}
+
+
+.link2:hover {
+  opacity: .7;
+}
+.link3:hover {
+  opacity: .7;
+}
+
+.copyright {
+  
+  text-align: center;
+  position: relative;bottom:3rem;
+}
